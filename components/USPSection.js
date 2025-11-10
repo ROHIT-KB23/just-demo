@@ -16,8 +16,13 @@ export default function USPSection() {
       const windowHeight = window.innerHeight;
 
       const scrollStart = -rect.top;
-      const scrollRange = sectionHeight - windowHeight;
-      const progress = Math.max(0, Math.min(1, scrollStart / scrollRange));
+      const HEADER_HEIGHT = 100; // adjust based on your actual header size
+const scrollRange = sectionHeight - (windowHeight - HEADER_HEIGHT);
+
+      // const scrollRange = sectionHeight - windowHeight;
+      // const progress = Math.max(0, Math.min(1, scrollStart / scrollRange));
+      const progress = Math.max(0, Math.min(0.99, scrollStart / scrollRange));
+
 
       setScrollProgress(progress);
     };
@@ -70,24 +75,39 @@ export default function USPSection() {
     return { transform: `scale(${scale})`, opacity };
   };
 
+  // const getText3Transform = () => {
+  //   if (scrollProgress < 0.85) {
+  //     return { transform: "scale(0)", opacity: 0 };
+  //   }
+  //   const enterStart = scrollProgress - 0.85;
+  //   const progress = Math.min(1, enterStart / 0.08);
+  //   const scale = progress;
+  //   const opacity = progress;
+  //   return { transform: `scale(${scale})`, opacity };
+  // };
+
   const getText3Transform = () => {
-    if (scrollProgress < 0.85) {
-      return { transform: "scale(0)", opacity: 0 };
-    }
-    const enterStart = scrollProgress - 0.85;
-    const progress = Math.min(1, enterStart / 0.08);
-    const scale = progress;
-    const opacity = progress;
-    return { transform: `scale(${scale})`, opacity };
-  };
+  if (scrollProgress < 0.75) return { transform: "scale(0)", opacity: 0 };
+  const enterStart = scrollProgress - 0.75;
+  const progress = Math.min(1, enterStart / 0.25); // lasts longer till scroll end
+  const scale = progress;
+  const opacity = progress;
+  return { transform: `scale(${scale})`, opacity };
+};
+
 
   return (
     <section
       ref={sectionRef}
       className="bg-white py-20 md:py-32"
-      style={{ minHeight: "280vh" }}
+      style={{ minHeight: "250vh" }}
     >
-      <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
+      {/* <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden"> */}
+      <div
+  className="sticky flex items-center justify-center overflow-hidden"
+  style={{ top: "100px", height: "calc(100vh - 100px)" }} // compensate for header
+>
+
         <div className="relative w-full h-full">
           <div className="relative w-full h-full overflow-hidden">
             <div
