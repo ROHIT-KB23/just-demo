@@ -1,7 +1,7 @@
 export default function FutureSection() {
   return (
     <section className="bg-white">
-      <div className="w-full flex flex-col lg:flex-row px-8 lg:px-16 py-8 lg:py-12">
+      <div className="w-full flex flex-col lg:flex-row px-8 lg:px-16 py-8 lg:py-14">
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-end items-center lg:pr-8">
           <h2 className="text-4xl md:text-4xl lg:text-4xl xl:text-5xl font-serif tracking-wider text-center lg:text-left leading-relaxed">
             FUTURE OF DIAMONDS
