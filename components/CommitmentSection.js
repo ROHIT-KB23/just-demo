@@ -14,21 +14,24 @@ export default function CommitmentSection() {
           </p>
         </div>
       </div>
-
-      {/* <div
-        className="min-h-screen flex items-center justify-b p-4 bg-fixed bg-center bg-no-repeat"
+      <div
+        className="min-h-screen flex items-center justify-center p-4 bg-fixed bg-center bg-no-repeat bg-cover"
         style={{ backgroundImage: "url('/images/background-image.png')" }}
       >
-        <div className="max-w-7xl mx-auto w-full">
+        <div className="max-w-[95%] mx-auto w-full">
           <div className="flex flex-col lg:flex-row items-start justify-between gap-8">
+            {/* Left Text */}
             <div className="lg:w-1/3 text-center lg:text-left">
-              <p className="text-2xl md:text-2xl text-white">
-                The world's fully traceable, 100% Climate Neutral
+              <p className="text-2xl md:text-3xl text-white">
+                The world's fully traceable,
+                <br />
+                100% Climate Neutral
               </p>
             </div>
 
+            {/* Right Text */}
             <div className="lg:w-1/3 text-center lg:text-right">
-              <p className="text-2xl md:text-2xl text-white">
+              <p className="text-2xl md:text-3xl text-white">
                 The world's fully traceable,
                 <br />
                 100% Climate Neutral and
@@ -40,40 +43,8 @@ export default function CommitmentSection() {
             </div>
           </div>
         </div>
-      </div> */}
-
-
-       <div
-      className="min-h-screen flex items-center justify-center p-4 bg-fixed bg-center bg-no-repeat bg-cover"
-      style={{ backgroundImage: "url('/images/background-image.png')" }}
-    >
-      <div className="max-w-[95%] mx-auto w-full">
-        <div className="flex flex-col lg:flex-row items-start justify-between gap-8">
-          {/* Left Text */}
-          <div className="lg:w-1/3 text-center lg:text-left">
-            <p className="text-2xl md:text-3xl text-white">
-              The world's fully traceable,
-              <br />
-              100% Climate Neutral
-            </p>
-          </div>
-
-          {/* Right Text */}
-          <div className="lg:w-1/3 text-center lg:text-right">
-            <p className="text-2xl md:text-3xl text-white">
-              The world's fully traceable,
-              <br />
-              100% Climate Neutral and
-              <br />
-              Sustainability Rated
-              <br />
-              Lab-Grown Diamonds
-            </p>
-          </div>
-        </div>
       </div>
-    </div>
-  );
+      );
     </div>
   );
 }
