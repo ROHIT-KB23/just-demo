@@ -11,7 +11,7 @@ export default function Home() {
       <HeroSection />
       <FutureSection />
       <CommitmentSection />
-      <USPSection />
+      {/* <USPSection /> */}
     </main>
   )
 }
