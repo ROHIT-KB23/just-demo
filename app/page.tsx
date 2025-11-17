@@ -2,7 +2,6 @@ import Header from '../components/Header'
 import HeroSection from '../components/Herosection'
 import FutureSection from '../components/FutureSection'
 import CommitmentSection from '../components/CommitmentSection'
-import USPSection from '../components/USPSection'
 
 export default function Home() {
   return (
@@ -11,7 +10,6 @@ export default function Home() {
       <HeroSection />
       <FutureSection />
       <CommitmentSection />
-      {/* <USPSection /> */}
     </main>
   )
 }
