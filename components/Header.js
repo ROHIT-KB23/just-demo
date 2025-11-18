@@ -1,8 +1,9 @@
+import Image from "next/image";
 export default function Header() {
   return (
     <header
       className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200"
-      style={{ padding: "2rem 4rem" }}
+      style={{ padding: "0.75rem 2rem" }}
     >
       <div className="flex justify-between items-center">
         {/* Logo */}
