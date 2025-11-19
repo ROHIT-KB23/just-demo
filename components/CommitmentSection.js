@@ -2,6 +2,7 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { cormorant ,montserrat  } from "../app/font";
 
 export default function CommitmentSection() {
   const stickyRef = useRef(null);
@@ -11,36 +12,44 @@ export default function CommitmentSection() {
   });
 
   // IMAGE 1: Zoom out from 1.3x to 1x scale
-  const img1Scale = useTransform(scrollYProgress, [0, 0.15], [1.2, 1]);
-  const img1Opacity = useTransform(scrollYProgress, [0, 0.15, 0.45], [1, 1, 0]); // Fades out when image 2 appears
+  const img1Scale = useTransform(scrollYProgress, [0, 0.2], [1.2, 1]);
+  const img1Opacity = useTransform(scrollYProgress, [0, 0.2, 0.5], [1, 1, 0]); // Fades out when image 2 appears
 
-  // IMAGE 2: Position + zoom out effect
-  const img2Y = useTransform(scrollYProgress, [0.15, 0.45], ["100%", "0%"]);
-  const img2Scale = useTransform(scrollYProgress, [0.15, 0.45], [1.5, 1]);
-  const img2Opacity = useTransform(scrollYProgress, [0.1, 0.15, 0.45, 0.5], [0, 1, 1, 1]); // Only visible during its section
+  // IMAGE 2: Start completely off-screen
+// const img2Y = useTransform(scrollYProgress, [0.2, 0.5], ["120%", "0%"]);
+// const img2Scale = useTransform(scrollYProgress, [0.2, 0.5], [1.8, 1]);
+// const img2Opacity = useTransform(scrollYProgress, [0.18, 0.2, 0.45, 0.5], [0, 1, 1, 1]);
 
-  // IMAGE 3: Position + zoom out effect
-  const img3Y = useTransform(scrollYProgress, [0.5, 0.8], ["100%", "0%"]);
-  const img3Scale = useTransform(scrollYProgress, [0.5, 0.8], [1.3, 1]);
-  const img3Opacity = useTransform(scrollYProgress, [0.45, 0.5, 0.8, 0.85], [0, 1, 1,1]); // Only visible during its section
+// // IMAGE 3: Similarly adjust
+// const img3Y = useTransform(scrollYProgress, [0.5, 0.8], ["120%", "0%"]);
+// const img3Scale = useTransform(scrollYProgress, [0.5, 1], [1.5, 1]);
+// const img3Opacity = useTransform(scrollYProgress, [0.48, 0.5, 0.8, 0.85], [0, 1, 1, 1]);
+// IMAGE 2: Start completely off-screen
+const img2Y = useTransform(scrollYProgress, [0.2, 0.45], ["120%", "0%"]);
+const img2Scale = useTransform(scrollYProgress, [0.2, 0.45], [1.5, 1]);
+const img2Opacity = useTransform(scrollYProgress, [0.18, 0.2, 0.45, 0.5], [0, 1, 1, 1]);
+
+// IMAGE 3: Similarly adjust
+const img3Y = useTransform(scrollYProgress, [0.5, 0.8], ["120%", "0%"]);
+const img3Scale = useTransform(scrollYProgress, [0.5, 1], [1.5, 1]);
+const img3Opacity = useTransform(scrollYProgress, [0.48, 0.5, 0.8, 0.85], [0, 1, 1, 1]);
 
   return (
     <div className="bg-black text-white">
       <div className="flex justify-center py-20 px-4">
-        <div className=" text-center">
-          <h1 className="text-[40px] md:text-6xl font-cormorant tracking-[2.5px] mb-4">
+        <div className="max-w-5xl text-center">
+          <h1 className={`text-4xl md:text-6xl lg:text-[75px] font-medium tracking-wide mb-4 ${cormorant.className}`}>
             A commitment to conscience
           </h1>
-          <p className="font-mont text-lg md:text-[29px] text-gray-300 max-w-6xl mx-auto leading-none leading-[25px] lg:leading-[38px] tracking-[0.2px]">
+          <p className={`text-lg md:text-[28px] font-normal text-[#FFFFFF] max-w-5xl mx-auto ${montserrat.className}`}>
             Each Maitri represents an unwavering dedication to environmental{" "}
             <br />
             stewardship. Certified climate-neutral, fully traceable, cultivated
-            with reverence <br/>
-            for our planet.{" "}
+            with reverence for our planet.{" "}
           </p>
         </div>
       </div>
-
+{/* h-[calc(100vh-2rem)] */}
       {/* sticky container sized tall so scrollYProgress can drive the transitions */}
       <div ref={stickyRef} className="relative h-[320vh]">
         <div className="sticky top-0 h-screen w-full overflow-hidden">
@@ -55,7 +64,7 @@ export default function CommitmentSection() {
             }}
           >
             <motion.img
-              src="/images/Diamond.jpg"
+              src="\images\jewellery5.jpg"
               className="h-full w-full object-cover"
               draggable={false}
               style={{ scale: img1Scale }}
@@ -75,10 +84,8 @@ export default function CommitmentSection() {
               opacity: img2Opacity
             }}
           >
-            public\images\Jewellery1.jpg
-            {/* public\images\Untitled design (12) (1).jpg */}
             <motion.img
-              src="/images/Jewellery1.jpg"
+              src="\images\jewellery10.jpg"
               className="h-full w-full object-cover"
               draggable={false}
               style={{ scale: img2Scale }}
@@ -98,9 +105,8 @@ export default function CommitmentSection() {
               opacity: img3Opacity
             }}
           >
-            {/* public\images\Untitled design (1).jpg */}
             <motion.img
-              src="/images/Jewellery2.jpg"
+              src="\images\jewellery8.jpg"
               className="h-full w-full object-cover"
               draggable={false}
               style={{ scale: img3Scale }}
