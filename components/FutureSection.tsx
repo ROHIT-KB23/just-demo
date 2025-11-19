@@ -84,10 +84,9 @@ export default function FutureSection() {
         </div>
 
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-start items-center lg:pl-8 mt-6 lg:mt-0">
-          <p className="text-gray-700 text-base md:text-lg lg:text-2xl leading-snug text-center tracking-wide lg:text-left">
-            The world's fully traceable, 100% Climate Neutral and <br />
-            Sustainability Rated Lab-Grown Diamonds.
-            <br />
+          <p className="font-mont text-[20px] lg:text-[22px] leading-none leading-[25px] lg:leading-[25px] text-[#000000] tracking-[0.2px] text-left ">
+            The world’s fully traceable, 100% Climate Neutral and <br />
+            Sustainability Rated Lab-Grown Diamonds. <br />
             Grown in our Indian laboratory using patented CVD technology.
           </p>
         </div>
@@ -111,7 +110,7 @@ export default function FutureSection() {
         <div className="relative w-full md:w-1/2 h-1/2 md:h-full">
           <VideoWithThumbnail
             thumbSrc="/images/jewelry-hand.jpg"
-            videoSrc="/videos/jewelry-hand.mp4"
+            videoSrc="https://res.cloudinary.com/dcwgzfcj2/video/upload/v1763535445/jewelry-hand_lt9xkx.mp4"
             alt="Jewelry on hand"
           />
         </div>
@@ -120,7 +119,7 @@ export default function FutureSection() {
         <div className="relative w-full md:w-1/2 h-1/2 md:h-full">
           <VideoWithThumbnail
             thumbSrc="/images/model.jpg"
-            videoSrc="/videos/model.mp4"
+            videoSrc="https://res.cloudinary.com/dcwgzfcj2/video/upload/v1763535468/model_qrqgsu.mp4"
             alt="Model"
           />
         </div>

@@ -27,15 +27,16 @@ export default function CommitmentSection() {
   return (
     <div className="bg-black text-white">
       <div className="flex justify-center py-20 px-4">
-        <div className="max-w-5xl text-center">
-          <h1 className="text-4xl md:text-6xl font-light tracking-wider mb-4">
+        <div className=" text-center">
+          <h1 className="text-[40px] md:text-6xl font-cormorant tracking-[2.5px] mb-4">
             A commitment to conscience
           </h1>
-          <p className="text-lg md:text-[29px] text-gray-300 max-w-5xl mx-auto">
+          <p className="font-mont text-lg md:text-[29px] text-gray-300 max-w-6xl mx-auto leading-none leading-[25px] lg:leading-[38px] tracking-[0.2px]">
             Each Maitri represents an unwavering dedication to environmental{" "}
             <br />
             stewardship. Certified climate-neutral, fully traceable, cultivated
-            with reverence for our planet.{" "}
+            with reverence <br/>
+            for our planet.{" "}
           </p>
         </div>
       </div>
