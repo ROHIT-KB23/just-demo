@@ -180,7 +180,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { cormorant, montserrat } from "../app/font";
+
 
 interface VideoWithThumbnailProps {
   thumbSrc: string;
